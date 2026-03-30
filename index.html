@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nome Cognome | Marketing Strategist, Performance & Project Management</title>
+  <title>Vittorio Curatolo | Marketing Strategist, Performance & Project Management</title>
   <meta name="description" content="Professionista del digital marketing con focus su strategia, performance marketing, media buying e project management per imprenditori, PMI e aziende." />
   <meta name="theme-color" content="#0f172a" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,22 +11,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('is-open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+</script>
 <body>
   <header class="site-header">
-    <div class="container nav">
-      <a href="#top" class="brand">Vittorio <span>Curatolo</span></a>
+  <div class="container nav">
+    <a href="#top" class="brand">Vittorio <span>Curatolo</span></a>
 
-      <nav class="nav-links" aria-label="Navigazione principale">
-        <a href="#chi-sono">Chi sono</a>
-        <a href="#servizi">Servizi</a>
-        <a href="#metodo">Metodo</a>
-        <a href="#specializzazioni">Specializzazioni</a>
-        <a href="#contatti">Contatti</a>
-      </nav>
+    <nav class="nav-links" aria-label="Navigazione principale">
+      <a href="#chi-sono">Chi sono</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#metodo">Metodo</a>
+      <a href="#specializzazioni">Specializzazioni</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
 
-      <a href="#contatti" class="btn btn-secondary">Richiedi una consulenza</a>
-    </div>
-  </header>
+    <a href="#contatti" class="btn btn-secondary nav-cta">Richiedi una consulenza</a>
+
+    <button class="menu-toggle" aria-label="Apri il menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu">
+    <a href="#chi-sono">Chi sono</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#metodo">Metodo</a>
+    <a href="#specializzazioni">Specializzazioni</a>
+    <a href="#contatti">Contatti</a>
+  </div>
+</header>
 
   <main id="top">
     <section class="hero">
