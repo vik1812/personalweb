@@ -632,11 +632,21 @@ p {
   color: var(--text-light);
 }
 
+.contact-way a {
+  display: inline-block;
+}
+
 .contact-card {
   padding: 30px;
   border-radius: var(--radius-md);
   border: 1px solid var(--line-dark);
   background: rgba(5, 10, 20, 0.32);
+}
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 form {
