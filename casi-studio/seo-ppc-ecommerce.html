@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caso studio | SEO & PPC per ecommerce</title>
+  <meta name="description" content="Caso studio su un progetto ecommerce sviluppato tra SEO e PPC per aumentare visibilità, traffico qualificato e risultati online." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-light: #f7f4ee;
+      --surface: #ffffff;
+      --text: #1a1d23;
+      --text-soft: #626973;
+      --text-light: #eef2f7;
+      --line: #dfd7cc;
+      --line-dark: rgba(255,255,255,0.12);
+      --accent: #37a2df;
+      --accent-2: #7c5cff;
+      --gradient: linear-gradient(135deg, #37a2df 0%, #7c5cff 100%);
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      --radius-lg: 28px;
+      --radius-md: 22px;
+      --container: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg-light);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(calc(100% - 40px), var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: rgba(247, 244, 238, 0.86);
+      border-bottom: 1px solid rgba(223, 215, 204, 0.85);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand,
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -0.04em;
+    }
+
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-back {
+      font-size: 15px;
+      color: var(--text-soft);
+      font-weight: 600;
+    }
+
+    .nav-back:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 72px 0 52px;
+      background:
+        radial-gradient(circle at top left, rgba(55, 162, 223, 0.12), transparent 28%),
+        linear-gradient(180deg, #f8f6f1 0%, #f7f4ee 100%);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.8);
+      color: #4e5763;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gradient);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.02;
+      max-width: 900px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.05;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.12;
+    }
+
+    p {
+      margin: 0 0 18px;
+      color: var(--text-soft);
+      font-size: 18px;
+    }
+
+    .lead {
+      max-width: 820px;
+      font-size: 21px;
+    }
+
+    .hero-image {
+      margin-top: 32px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .kpi-card {
+      padding: 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.78);
+      box-shadow: var(--shadow);
+    }
+
+    .kpi-card small {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #6a7380;
+    }
+
+    .kpi-card strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .kpi-card span {
+      color: var(--text-soft);
+      font-size: 15px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .sticky-summary {
+      position: sticky;
+      top: 100px;
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .summary-list {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .summary-list li {
+      padding-left: 18px;
+      position: relative;
+      color: var(--text-soft);
+      font-size: 16px;
+    }
+
+    .summary-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .article-flow {
+      display: grid;
+      gap: 24px;
+    }
+
+    .content-card {
+      padding: 30px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .content-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bullet-list {
+      margin: 16px 0 0;
+      padding-left: 20px;
+      color: var(--text-soft);
+    }
+
+    .bullet-list li + li {
+      margin-top: 8px;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .result-box {
+      padding: 22px;
+      border-radius: 18px;
+      background: #fbfaf7;
+      border: 1px solid #ebe4d9;
+    }
+
+    .result-box strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .result-box span {
+      color: var(--text-soft);
+      font-size: 15px;
+    }
+
+    .quote-box {
+      padding: 30px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-dark);
+      color: var(--text-light);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+    }
+
+    .quote-box h2,
+    .quote-box h3,
+    .quote-box p {
+      color: var(--text-light);
+    }
+
+    .quote-box p {
+      color: #c7d1df;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: #08111d;
+      box-shadow: 0 12px 28px rgba(55, 162, 223, 0.18);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+      color: var(--text-light);
+    }
+
+    .footer {
+      padding: 26px 0 40px;
+      color: var(--text-soft);
+      font-size: 14px;
+      border-top: 1px solid rgba(223, 215, 204, 0.85);
+    }
+
+    @media (max-width: 980px) {
+      .content-grid,
+      .kpi-row,
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky-summary {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        width: min(calc(100% - 28px), var(--container));
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .hero {
+        padding: 54px 0 42px;
+      }
+
+      p, .lead {
+        font-size: 17px;
+      }
+
+      .content-card,
+      .sticky-summary,
+      .quote-box,
+      .kpi-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">Vittorio <span>Curatolo</span></a>
+      <a href="/casi-studio" class="nav-back">← Torna ai casi studio</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Campagne SEO & PPC</span>
+        <h1>Far lavorare SEO e advertising nella stessa direzione</h1>
+        <p class="lead">
+          Un progetto sviluppato per un ecommerce con l’obiettivo di aumentare visibilità, traffico qualificato e risultati online, attraverso un lavoro più coordinato tra crescita organica e campagne paid.
+        </p>
+
+        <div class="hero-image">
+          <img src="case-study-2.png" alt="Caso studio SEO e PPC per ecommerce" />
+        </div>
+
+        <div class="kpi-row">
+          <div class="kpi-card">
+            <small>Traffico</small>
+            <strong>+80%</strong>
+            <span>Aumento del traffico in 3 mesi</span>
+          </div>
+          <div class="kpi-card">
+            <small>Approccio</small>
+            <strong>SEO + PPC</strong>
+            <span>Lavoro coordinato tra organico e paid</span>
+          </div>
+          <div class="kpi-card">
+            <small>Obiettivo</small>
+            <strong>Più coerenza</strong>
+            <span>Maggiore qualità del traffico e del lavoro svolto</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-grid">
+        <aside class="sticky-summary">
+          <h3>In sintesi</h3>
+          <ul class="summary-list">
+            <li>Cliente: ecommerce</li>
+            <li>Focus: SEO, PPC, visibilità e traffico qualificato</li>
+            <li>Obiettivo: rendere il marketing meno frammentato</li>
+            <li>Approccio: strategia + execution + ottimizzazione</li>
+            <li>Risultato: +80% di traffico in 3 mesi</li>
+          </ul>
+        </aside>
+
+        <div class="article-flow">
+          <article class="content-card">
+            <h2>Contesto</h2>
+            <p>
+              Il progetto riguardava un ecommerce che aveva bisogno di crescere in termini di visibilità e risultati online, ma con un marketing ancora troppo frammentato tra attività SEO e campagne paid.
+            </p>
+            <p>
+              Il problema non era l’assenza di iniziative, ma la mancanza di una direzione abbastanza coordinata da far lavorare organico e advertising nella stessa logica, con obiettivi più chiari e una migliore qualità complessiva del traffico.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Obiettivo del progetto</h2>
+            <p>
+              L’obiettivo era costruire un’attività più coerente tra SEO e PPC, così da aumentare visibilità, traffico qualificato e continuità nei risultati.
+            </p>
+            <ul class="bullet-list">
+              <li>Rendere il marketing meno frammentato</li>
+              <li>Migliorare la qualità del traffico in ingresso</li>
+              <li>Coordinare meglio organico e campagne paid</li>
+              <li>Costruire una presenza online più solida ed efficace</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h2>Attività svolte</h2>
+            <p>
+              Il lavoro si è concentrato sul coordinamento tra strategia SEO e campagne PPC, con l’obiettivo di far lavorare meglio le due aree invece di trattarle come attività separate.
+            </p>
+            <ul class="bullet-list">
+              <li>Analisi iniziale del contesto e delle attività già presenti</li>
+              <li>Revisione delle priorità e della logica di presidio dei canali</li>
+              <li>Allineamento tra crescita organica e campagne advertising</li>
+              <li>Ottimizzazione progressiva delle attività in funzione degli obiettivi</li>
+              <li>Monitoraggio dell’andamento e miglioramento della qualità del traffico</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h2>Il mio ruolo</h2>
+            <p>
+              Ho affiancato il progetto sia sul piano strategico sia su quello operativo, contribuendo a dare maggiore coerenza al lavoro tra SEO e PPC e a rendere più chiara la direzione complessiva delle attività.
+            </p>
+            <p>
+              Il mio contributo si è concentrato soprattutto su struttura, priorità, lettura del contesto e qualità dell’execution, con un approccio orientato a risultati sostenibili e meno dispersivi.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Risultati</h2>
+            <p>
+              Il risultato più evidente è stato un aumento del traffico pari a circa <strong>+80% in 3 mesi</strong>, insieme a una maggiore coerenza tra attività organiche e paid.
+            </p>
+
+            <div class="result-grid">
+              <div class="result-box">
+                <strong>+80% traffico</strong>
+                <span>Crescita del traffico in 3 mesi</span>
+              </div>
+              <div class="result-box">
+                <strong>Più coordinamento</strong>
+                <span>SEO e PPC allineati in una logica comune</span>
+              </div>
+              <div class="result-box">
+                <strong>Più qualità</strong>
+                <span>Traffico più coerente con gli obiettivi del business</span>
+              </div>
+              <div class="result-box">
+                <strong>Più ordine</strong>
+                <span>Marketing meno frammentato e più leggibile</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="quote-box">
+            <h2>Cosa ha fatto la differenza</h2>
+            <p>
+              In questo progetto il punto non era semplicemente “fare SEO” o “fare advertising”, ma costruire un lavoro più coerente tra canali, priorità e obiettivi. Ed è spesso lì che si gioca la differenza tra attività che si sommano e marketing che inizia davvero a funzionare meglio.
+            </p>
+
+            <div class="btn-row">
+              <a href="/#contatti" class="btn btn-primary">Parliamo del tuo progetto</a>
+              <a href="/casi-studio" class="btn btn-secondary">Vedi altri casi studio</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 Vittorio Curatolo · Casi studio
+    </div>
+  </footer>
+</body>
+</html>

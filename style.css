@@ -425,7 +425,7 @@ p {
   border: 1px solid var(--line-light);
   background: var(--surface-light);
   box-shadow: var(--shadow-soft);
-  min-height: 320px;
+  min-height: 300px;
 }
 
 .services-head-image img {
